@@ -52,7 +52,7 @@ def send_mail_to(address):
            " from the photobooth for privacy reasons.\n\nWe hope you had a great time!" \
            "\nChristophorus Haus Semesterparty Team"
     msg.attach(MIMEText(body, "plain"))
-    filename = "~/Documents/capture.jpg"
+    filename = "/home/pi/Documents/capture.jpg"
     attachment = open(filename, "rb")
 
     part = MIMEBase('application', 'octet-stream')
