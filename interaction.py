@@ -14,7 +14,7 @@ def start_conversation():
     print("\033[H\033[J")
     print("Welcome to the Christophorus Photobooth! We are happy you are here!")
 
-    response = input("Do you want to take a picture? [yes, y, no, n]\n")
+    response = raw_inpur("Do you want to take a picture? [yes, y, no, n]\n")
     return response
 
 
@@ -37,7 +37,7 @@ def take_picture():
 
 def get_email_addresses():
     print("Please enter your email to receive the image.")
-    addresses = input("More than one address is possible. Please separate them with ';'\n")
+    addresses = raw_input("More than one address is possible. Please separate them with ';'\n")
     return addresses
 
 
