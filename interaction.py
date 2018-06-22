@@ -14,7 +14,7 @@ def start_conversation():
     print("\033[H\033[J")
     print("Welcome to the Christophorus Photobooth! We are happy you are here!")
 
-    response = raw_inpur("Do you want to take a picture? [yes, y, no, n]\n")
+    response = raw_input("Do you want to take a picture? [yes, y, no, n]\n")
     return response
 
 
