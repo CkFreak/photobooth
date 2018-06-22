@@ -46,7 +46,7 @@ def send_mail_to(address):
     print("Preparing image to be sent")
     msg = MIMEMultipart()
     msg["From"] = from_address
-    msg["To"] = address
+    msg["To"] = ",".join(addresses)
     msg["Subject"] = "CH-Photobooth"
 
     body = "In the attachment you will find your personal image!\nThis is a unique picture it was deleted" \
@@ -71,7 +71,7 @@ def send_mail_to(address):
     server.login(os.environ["MAIL_USER"], os.environ["MAIL_PASSWORD"])
     text = msg.as_string()
     print("Sending mail...")
-    server.sendmail(from_address, ",".join(addresses), text)
+    server.sendmail(from_address, addresses, text)
     server.quit()
     print("Email was sent to %s" % address)
     os.remove(filename)
