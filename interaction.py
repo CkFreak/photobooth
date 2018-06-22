@@ -73,3 +73,7 @@ def send_mail_to(address):
     server.sendmail(from_address, address, text)
     server.quit()
     print("Email was sent to %s" % address)
+    os.remove(filename)
+    print("The image was purged! You are the only one to ever receive it :)")
+    print("Thank you for using our photobooth")
+    print("Feedback can be sent to: blaesche.m@gmail.com\n")

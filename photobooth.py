@@ -8,6 +8,7 @@ while response != "q":
         interaction.take_picture()
         response = interaction.get_email_addresses()
         interaction.send_mail_to(response)
+        response = interaction.start_conversation()
     else:
         print("Sad to see you leave! Enjoy the party ;)")
         response = interaction.start_conversation()
