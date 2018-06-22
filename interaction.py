@@ -42,6 +42,7 @@ def get_email_addresses():
 
 
 def send_mail_to(address):
+    addresses = address.split()
     print("Preparing image to be sent")
     msg = MIMEMultipart()
     msg["From"] = from_address
@@ -70,7 +71,7 @@ def send_mail_to(address):
     server.login(os.environ["MAIL_USER"], os.environ["MAIL_PASSWORD"])
     text = msg.as_string()
     print("Sending mail...")
-    server.sendmail(from_address, address, text)
+    server.sendmail(from_address, ",".join(addresses), text)
     server.quit()
     print("Email was sent to %s" % address)
     os.remove(filename)
