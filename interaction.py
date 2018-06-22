@@ -11,6 +11,8 @@ def start_conversation():
 
 
 def countdown(n):
+    print("Starting count-down!")
+    print("Get Ready!")
     while n > 0:
         print(n)
         time.sleep(1)
@@ -20,4 +22,6 @@ def countdown(n):
 
 
 def take_picture():
+    print("SMILE! :D")
     subprocess.call("image.sh")
+    print("Your image was captured!")
