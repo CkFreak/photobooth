@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-fswebcam ~/Documents/capture.jpg
+fswebcam --no-banner ~/Documents/capture.jpg
