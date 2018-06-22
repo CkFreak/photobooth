@@ -78,3 +78,4 @@ def send_mail_to(address):
     print("The image was purged! You are the only one to ever receive it :)")
     print("Thank you for using our photobooth")
     print("Feedback can be sent to: blaesche.m@gmail.com\n")
+    time.sleep(5)
