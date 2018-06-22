@@ -37,7 +37,7 @@ def take_picture():
 
 def get_email_addresses():
     print("Please enter your email to receive the image.")
-    addresses = raw_input("More than one address is possible. Please separate them with ','\n")
+    addresses = raw_input("More than one address is possible. Please separate them with a space.\n")
     return addresses
 
 
